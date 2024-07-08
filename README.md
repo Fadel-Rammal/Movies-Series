@@ -32,7 +32,7 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 ### Website
 
-Main Page
+| Main Page |
 
 ![book](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/1e79a2f9-c270-44e0-bc37-41538165b43a)
 
