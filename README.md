@@ -1,7 +1,7 @@
 # Movies-Series
 Bachelor of Science Senior Project
 
-### FolderSize To Downlaod is 275 MB
+### FolderSize To Download is 275 MB
 
 A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows.
 Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
