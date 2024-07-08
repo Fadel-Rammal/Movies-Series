@@ -124,11 +124,11 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 | Success Page |
 
-![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e4952fb-79c7-422d-bfa3-2dce731dc4d7)
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/afc307fe-9a87-483b-b30e-2767c75847ee)
 
 | Reserved Tickets Page |                                                                                      
 
-![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/afc307fe-9a87-483b-b30e-2767c75847ee)
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e4952fb-79c7-422d-bfa3-2dce731dc4d7)
 
 | Received Notification |
 
