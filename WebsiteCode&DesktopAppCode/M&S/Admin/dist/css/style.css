@@ -1,0 +1,18 @@
+
+.insert {
+    /* background-color: pink; */
+    max-width: 600px;
+    height: auto;
+}
+
+.login{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: auto;
+}
+.log-wraper{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}

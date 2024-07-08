@@ -1,0 +1,391 @@
+/* 
+    #backgrond color
+    background: rgb(210,13,13); 
+    background: linear-gradient(90deg, rgba(210,13,13,1) 1%, rgba(73,9,12,1) 67%);
+*/
+
+
+
+/* MOVIE */
+body{
+    padding: 0;
+    margin: 0;
+    margin-top: 0px;
+    box-sizing: border-box;
+    background:  hsl(228, 13%, 15%);
+    height: 2000px;
+}
+#main{
+    background:  hsl(228, 13%, 15%);
+    margin-top: -20px;
+    height: auto;
+}
+#nav,#nav-seat{
+    height: 100px;
+    background-color:  hsl(228, 13%, 15%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: -10px;
+}
+#nav ul li a,#nav-seat ul li a{
+    text-decoration: none; 
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+}
+#nav ul li:first-child a{
+    color:rgb(255, 234, 94);
+}
+ #nav ul li,#nav-seat ul li{
+    color: white;
+    font-weight: bold;
+    list-style-type: none;
+    float: left;
+    font-size: 2em;
+    margin: auto ;
+}
+#main #description {
+    margin-top: 40px;
+}
+#main #description .content{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main #description .content #movie-image{
+    width: 13%;
+    height: 275px;
+    border-radius: 2px;
+    padding: 20px;
+}
+#main #description .content #movie-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+#main #description .content #middle{
+    width: 50%;
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#main #description .content #middle #movie-title{
+    font-weight: bold;
+    color: rgb(255, 224, 22);
+    font-size: 1.5em;
+}
+ #middle #movie-datetime,#movie-genre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 0.75em;
+    padding: 5px;
+    margin-bottom: -15px;
+}
+ #middle #movie-description{
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 0.75em;
+}
+#main #description .content #movie-screen-types{
+    width: 13%;
+}
+#main #description .content #movie-screen-types img{
+    width: 100%;
+    height: 80px;
+}
+#main #description .content #middle a{
+    background-color: rgb(255, 224, 22);
+    border-radius: 2px;
+    height: 35px;
+    border: 0px;
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+#main #description .content #middle a:hover{
+    cursor: pointer;
+} 
+#main .trialer{
+    display: flex;
+    justify-content: center;
+}
+#main .trialer iframe{
+    width: 76%;
+    height: 500px;
+}
+
+
+/* booking */
+#nav-seat{
+    margin-top: 20px;
+    height: 50px;
+    position:static;
+    background-color:  hsl(228, 13%, 15%);
+}
+#nav-seat ul li a{
+    border-right: 1px solid gray;
+    background-color:  hsl(228, 13%, 15%);
+    font-size: 12px;
+    padding: 15px 80px;
+}
+#nav-seat ul li:last-child a{
+    border-right: 0;
+    background-color:  hsl(228, 13%, 15%);
+}
+#nav-seat ul li:first-child a{
+    background-color: rgb(234, 230, 230);
+    color: black;
+    background-color: rgb(234, 230, 230);
+}
+#nav-seat ul li a#second{
+    background-color: rgb(234, 230, 230);
+    color: black;
+}
+#nav-seat ul li a#first{
+    background-color:  hsl(225, 7%, 76%);
+    color: rgb(39, 38, 38);
+}
+#showtime-details{
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+#summary-details{
+    background-color: hsl(170, 21%, 5%);
+    margin-top: 40px;
+    width: 26%;
+    height: 570px;
+    padding: 20px;
+}
+#summary-details #box{
+    display: flex;
+    flex-wrap: nowrap;
+}
+#summary-details #box #image img{
+    height: 100%;
+}
+#summary-details #box #image{
+    width: 100px;
+    height: 135px;
+    display: block;
+}
+#summary-details #summary{
+    font-size: 30px;
+    font-family: 'Heebo',sans-serif;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+#summary-details #box #description{
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+#summary-details #box #description #title{
+    font-family: 'Heebo' ,sans-serif;
+    font-weight: bold;
+    color: rgb(255, 234, 94);
+    font-size: 1.25em;
+    margin-top: 10px;
+}
+#summary-details #box #description #schedule{
+    font-family: 'Heebo' ,sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.6em;
+    letter-spacing: 1px;
+    line-height: 10px;
+}
+#summary-details #seat{
+    margin-top: 20px;
+    font-family: 'Heebo' ,sans-serif;
+    padding: 10px;
+    color: white;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    display: flex;
+}
+#summary-details #total{
+    font-family: 'Heebo' ,sans-serif;
+    padding: 10px;
+    color: white;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    display: flex;
+}
+#summary-details #customer-info form input{
+    font-family: 'Heebo',sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 5px;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 90%;
+    margin-top: 10px;
+}
+#summary-details #customer-info {
+    font-family: 'Heebo',sans-serif;
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+#summary-details #btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    
+}
+#summary-details #btn form{
+    display: contents;
+}
+#summary-details #btn button#reserve{
+    font-size: 0.6em;
+    text-decoration: none;
+    padding:5px;
+    color: white;
+    font-family: 'Heebo',sans-serif;
+    background-color: transparent;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    border: 1px solid rgb(255, 234, 94);
+}
+#summary-details #btn button#checkout-button{
+    font-family: 'Heebo', sans-serif;
+    font-size: 0.6em;
+    text-decoration: none;
+    padding:5px;
+    border-radius: 5px;
+    border :1px solid gray;
+    color: black;
+    background-color: rgb(255, 234, 94);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    margin-bottom: 20px;
+}
+
+.widget{
+    width: 400px;
+    -color: rgb(101, 7, 7);
+    padding: 10px;
+    display: flex;
+    font-family: 'Heebo',sans-serif;
+    margin: 20px;
+}
+.widget #logo{
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+}
+.widget #logo img{
+    width: 100%;
+}
+.widget .schedule-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.widget .schedule-list .location{
+    height: 30px;
+    font-size: 1.25em;
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+.widget .schedule-list .theatre-list ul li{
+    list-style-type: none;
+    padding: 4px;
+    margin-top: 5px;
+}
+.widget .schedule-list .theatre-list ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0px;
+}
+.widget .schedule-list .theatre-list ul li a{
+    padding: 5px;
+    font-size: 15px;
+    text-decoration: none;
+    border: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 234, 94);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.widget .schedule-list .theatre-list .theatre{
+    color: white;
+}
+
+/* seat */
+.active {
+    background-color: green;
+}
+.sold {
+    background-color: red;
+}
+
+td div {
+    cursor: pointer;
+    background-color: rgb(228, 201, 210);
+    height: 26px;
+    width: 32px;
+    margin: 15px;
+    font-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    gap: 50px;
+}
+
+
+/*HALL*/
+#whole-main{
+    display: flex;
+}
+#trapezoid{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 60px;
+    width: 80%;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    padding: 20px;
+}
+table{
+    display: flex;
+    justify-content: center;
+}
+#hall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 1000px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

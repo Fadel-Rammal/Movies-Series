@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <style>
+        /* Style the search results with white color */
+        #searchResults {
+            color: white;
+            text-align: center; /* Center the content */
+        }
+
+
+	h1{
+
+	color: white;
+	}
+	
+      
+
+    </style>
+</head>
+<body>
+    <h1>Actors of the Movie</h1>
+    
+
+
+
+
+
+    <!-- Display area for search results -->
+    <div id="searchResults">
+	
+        <!-- Loading GIF -->
+        <img src="loading.gif" alt="Loading" style="width: 100px;">
+    </div>
+
+    <!-- JavaScript for automatically searching for the provided movie title -->
+    <script>
+        // Function to extract the movie title from the query parameter
+        function getMovieTitleFromURL() {
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            return urlParams.get('movie_title');
+        }
+
+        // Function to search for the movie title
+        function searchMovie(movieTitle) {
+            fetch('http://127.0.0.1:5000/search', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'movie_title=' + encodeURIComponent(movieTitle),
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Replace the loading message with the search results directly
+                document.getElementById('searchResults').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Get the movie title from the query parameter and perform the search
+        var movieTitle = getMovieTitleFromURL();
+        if (movieTitle) {
+            searchMovie(movieTitle);
+        }
+    </script>
+</body>
+</html>

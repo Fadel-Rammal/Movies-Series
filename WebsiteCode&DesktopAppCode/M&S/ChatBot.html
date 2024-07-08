@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <!-- Font import -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap" rel="stylesheet">
+    <!-- Font Awesome import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Your provided CSS */
+        @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap");
+        body {
+            background: #E8EBF5;
+            padding: 0;
+            margin: 0;
+            font-family: Raleway;
+            position: relative;
+        }
+        .chat-box {
+            height: 70%;
+            width: 400px;
+            position: fixed;
+            margin: 0 auto;
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            z-index: 15;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.005);
+            right: 0;
+            bottom: 0;
+            margin: 15px;
+            background: #fff;
+            border-radius: 15px;
+            visibility: hidden;
+        }
+        .chat-box-header {
+            height: 8%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            display: flex;
+            font-size: 14px;
+            padding: 0.5em 0;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2),
+                0 -1px 10px rgba(172, 54, 195, 0.3);
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.025);
+        }
+        .chat-box-header h3 {
+            font-family: ubuntu;
+            font-weight: 400;
+            float: left;
+            position: absolute;
+            left: 25px;
+        }
+        .chat-box-header p {
+            float: right;
+            position: absolute;
+            right: 16px;
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 3.25;
+            margin: 0;
+        }
+        .chat-box-body {
+            height: 75%;
+            background: #f8f8f8;
+            overflow-y: scroll;
+            padding: 12px;
+        }
+        .chat-box-body-send, .chat-box-body-receive {
+            width: 250px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);
+            margin-bottom: 14px;
+        }
+        .chat-box-body-send p, .chat-box-body-receive p {
+            margin: 0;
+            color: #444;
+            font-size: 14px;
+            margin-bottom: 0.25rem;
+        }
+        .chat-box-body-send span, .chat-box-body-receive span {
+            float: right;
+            color: #777;
+            font-size: 10px;
+        }
+        .chat-box-footer {
+            position: relative;
+            display: flex;
+        }
+        .chat-box-footer button {
+            border: none;
+            padding: 16px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+        .chat-box-footer button:focus {
+            outline: none;
+        }
+        .chat-box-footer input {
+            padding: 10px;
+            border: none;
+            -webkit-appearance: none;
+            border-radius: 50px;
+            background: whitesmoke;
+            margin: 10px;
+            font-family: ubuntu;
+            font-weight: 600;
+            color: #444;
+            width: 280px;
+        }
+        .chat-box-footer input:focus {
+            outline: none;
+        }
+        .chat-box-footer .send {
+            vertical-align: middle;
+            align-items: center;
+            justify-content: center;
+            transform: translate(0px, 20px);
+            cursor: pointer;
+        }
+        .chat-button {
+            padding: 25px 16px;
+            background: var(--citrine);
+            width: 60px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin: 15px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            box-shadow: 0 2px 15px rgba(#2C50EF, 0.21);
+            cursor: pointer;
+        }
+        .chat-button span::before {
+            content: "";
+            height: 15px;
+            width: 15px;
+            background: black;
+            position: absolute;
+            transform: translate(0, -7px);
+            border-radius: 15px;
+        }
+        
+      
+        @media screen only and (max-width: 450px) {
+            .chat-box {
+                min-width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-box">
+    <div class="chat-box-header">
+        <h3>Message Us</h3>
+        <p><i class="fa fa-times"></i></p>
+    </div>
+    <div class="chat-box-body">
+        <!-- Messages will go here -->
+    </div>
+    <div class="chat-box-footer">
+        <button id="addExtra"><i class="fa fa-plus"></i></button>
+        <input placeholder="Enter Your Message" type="text" />
+        <i class="send far fa-paper-plane"></i>
+    </div>
+</div>
+
+<div class="chat-button"><span></span></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    // Show default message when user opens the chatbot
+    $('.chat-box-body').html('<p style="text-align: center;">Welcome! Feel free to ask about movies.</p>');
+    
+    function isValidInput(userMessage) {
+        // Accepted keywords
+    const acceptedKeywords = ["movies", "actors", "movie", "actress"];
+    
+    // Check if any of the accepted keywords is present in the user's message
+    return acceptedKeywords.some(keyword => userMessage.toLowerCase().includes(keyword));
+    }
+
+    // Show chat box when chat button is clicked
+    $('.chat-button').on('click', function() {
+        $('.chat-button').css({
+            "display": "none"
+        });
+        $('.chat-box').css({
+            "visibility": "visible"
+        });
+    });
+
+    // Hide chat box when close button in header is clicked
+    $('.chat-box .chat-box-header p').on('click', function() {
+        $('.chat-button').css({
+            "display": "block"
+        });
+        $('.chat-box').css({
+            "visibility": "hidden"
+        });
+    });
+
+    // Send message when send button is clicked
+    $('.chat-box-footer .send').on('click', function() {
+        const userMessage = $('.chat-box-footer input').val().trim();
+        if (userMessage === '') return; // Skip if message is empty
+        
+        if (!isValidInput(userMessage)) {
+            // If user's message doesn't include "movies", prompt them
+            appendMessage('receiver', 'Include keywords(movies,movie,actor,actress)');
+            return;
+        }
+
+        const apiUrl = 'http://127.0.0.1:5001/'; // Update with your Flask endpoint
+
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ prompt: userMessage })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Append user message to the chat window
+            appendMessage('user', userMessage);
+            // Append AI response to the chat window
+            const aiMessage = data.message;
+            appendMessage('receiver', aiMessage);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+        // Clear the input field
+        $('.chat-box-footer input').val('');
+    });
+
+    function appendMessage(sender, text) {
+        const messageContainer = $('.chat-box-body');
+        const messageDiv = $('<div>').addClass('chat-box-body-' + sender).html('<p style="color: ' + (sender === 'user' ? 'green' : 'blue') + '; text-align: ' + (sender === 'user' ? 'left' : 'right') + ';">' + text + '</p>');
+        messageContainer.append(messageDiv);
+    }
+
+    // Adjust position of chat button on scroll
+    $(window).on('scroll', function() {
+        const scrollHeight = $(document).height();
+        const scrollPosition = $(window).height() + $(window).scrollTop();
+        const chatButton = $('.chat-button');
+
+        if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+            chatButton.css({
+                "bottom": "15px"
+            });
+        } else {
+            chatButton.css({
+                "bottom": "0"
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

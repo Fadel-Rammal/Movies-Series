@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        /* Style for the actor container */
+        .actor {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px; /* Adjust as needed */
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        /* Style for actor name and role */
+        .actor p {
+            margin: 0;
+            text-align: center; /* Center the text */
+        }
+
+        /* Style for actor image */
+        .actor img {
+            max-width: 100px; /* Adjust as needed */
+            display: block;
+            margin: 10px auto; /* Center the image */
+        }
+    </style>
+</head>
+<body>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <div>
+            {% for actor in top_5_actors %}
+                <div class="actor">
+                    <p>Actor Name: {{ actor.name }}</p> <!-- Add "Actor Name: " before the actor's name -->
+                    <p>Actor Role: {{ actor.role }}</p> <!-- Add "Actor Role: " before the actor's role -->
+                    {% if actor.image_url %}
+                        <img src="{{ actor.image_url }}" alt="{{ actor.name }}">
+                    {% else %}
+                        <p>No Image Available</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>
