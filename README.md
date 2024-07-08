@@ -168,7 +168,10 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 - Python
 
-- Run imdb script and chatbot script using cmd before using interact with them on website
+- Run imdb script and chatbot script using cmd before using chatbot and see actors for a movie on website
+
+- For notification and firebase dependencies then send notification using firebase cloud message console page
+
 
 
 
