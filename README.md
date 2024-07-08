@@ -12,8 +12,9 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 - Multiple subscription options
 - Parental control
 - Desktop python application to decrypt downloaded movies in background to be able to watch downloaded movies
-- Chatbot to ask about suggestions, movies, actors
+- Chatbot to ask about suggestions, movies, actors using gemini
 - Create random encryption key for registered user, so the key can be used to encrypt the movie when downloading it and decrypt it when playing it using python desktop application
+- Receive movie actors using imdb
 
 
 ### Admin:
@@ -68,7 +69,7 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 | Movie Watching Page |
 
-![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/0ca5127d-2a87-4333-997b-faf5eb9a1827)
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/4390384e-2efb-4bbb-a7c0-717cc3cb24fd)
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/af98d05c-1e50-42a6-ae83-69c8c467d6c3)
 
@@ -117,13 +118,21 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 ### Mobile application
 
-| Login Page |                                                                                                 | Success Page |
+| Login Page |                                                                                                
 
-![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e2ac13d-7e42-4cb3-8f06-333c2d9323c1) ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e4952fb-79c7-422d-bfa3-2dce731dc4d7)
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e2ac13d-7e42-4cb3-8f06-333c2d9323c1) 
 
-| Reserved Tickets Page |                                                                                      | Received Notification |
+| Success Page |
 
-![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/afc307fe-9a87-483b-b30e-2767c75847ee)    ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/e7b23b2b-a647-44f6-873f-a4de9ad583e1)
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/2e4952fb-79c7-422d-bfa3-2dce731dc4d7)
+
+| Reserved Tickets Page |                                                                                      
+
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/afc307fe-9a87-483b-b30e-2767c75847ee)
+
+| Received Notification |
+
+![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/e7b23b2b-a647-44f6-873f-a4de9ad583e1)
 
 
 ### Desktop application
@@ -159,7 +168,7 @@ A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows
 
 - Python
 
-
+- Run imdb script and chatbot script using cmd before using interact with them on website
 
 
 
