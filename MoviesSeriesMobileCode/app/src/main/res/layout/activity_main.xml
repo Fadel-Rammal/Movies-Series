@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Background Image View -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_page_mb"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+
+
+        android:src="@drawable/logo" />
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Your UI components -->
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="#D6B304"
+
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" /> <!-- Set hint text color to white -->
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:backgroundTint="#D6B304"
+
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" /> <!-- Set hint text color to white -->
+
+        <!-- Login Button with adjusted margin, yellow background, and white text -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="110dp"
+            android:background="#D6B304"
+            android:onClick="login"
+            android:text="Login"
+            android:textColor="@android:color/white" /> <!-- Adjust the margin as needed -->
+
+    </LinearLayout>
+
+</FrameLayout>
