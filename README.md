@@ -28,7 +28,7 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 ### Users:
 
 - User must be active to watch movies
-- If loggedin user is parent can lock/unlock specific movies before giving the child to watch it
+- If loggedin user is a parent then can lock/unlock specific movies before giving the child to watch movies
 - User login with the correct credentials on the desktop python application then selects downloaded movie to watch it, if loggedin user different than the user who downloaded the movie then an error that encryption key is incorrect will occur.
 
 
