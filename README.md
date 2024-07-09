@@ -1,6 +1,8 @@
 # Movies-Series
 Bachelor of Science Senior Project
 
+A collaborative project completed with a friend
+
 ### FolderSize To Download is 275 MB
 
 A Platform for Watching Movies Online and Offline, and Booking for Cinema Shows.
