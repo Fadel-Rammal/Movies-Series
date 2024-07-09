@@ -45,7 +45,7 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/9c56bb4c-f78f-46a7-be92-a2128bc2cc7a)
 
-| User SigN Up Page |
+| User Sign Up Page |
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/908aa302-a072-4c0a-8a72-e1974b645f5d)
 
@@ -65,7 +65,7 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/97f6b1a0-ed39-4fd0-a251-c592dffa1b03)
 
-| User Rederved Ticket Details |
+| User Bookings Page |
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/c62cbe44-5a77-4127-8d89-cc460171ec2c)
 
