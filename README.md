@@ -12,7 +12,7 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 - Online movie watching with encrypted download for movies
 - Mobile application for notifications and check bookings
 - Multiple subscription options
-- Parental control
+- Parental control, lock/unlock specific movies or turning ON main parental control
 - Desktop python application to decrypt downloaded movies in background to be able to watch downloaded movies
 - Chatbot to ask about suggestions, movies, actors using gemini
 - Create random encryption key for registered user, so the key can be used to encrypt the movie when downloading it and decrypt it when playing it using python desktop application
@@ -88,6 +88,10 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 | Parental Control |
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/f9b1cc48-783f-4771-ad02-c4b9008d013c)
+
+
+Toggle switch to be able to lock/unlock the movie, the password entered must be user password
+
 
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/3ffb568f-2d92-4b86-8dc7-530dbfcb5a87)
 
@@ -172,8 +176,11 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 
 - Run imdb script and chatbot script using cmd before using chatbot and see actors for a movie on website
 
-- For notification and firebase dependencies then send notification using firebase cloud message console page
+- For notification add firebase dependencies then send notification using firebase cloud message console page
 
+- Admin Page credentials:
+  Username: admin
+  Password: 123  
 
 
 
