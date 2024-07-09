@@ -12,7 +12,7 @@ Developed using: HTML, CSS, JS, PHP, Bootstrap, Python, Java.
 - Online movie watching with encrypted download for movies
 - Mobile application for notifications and check bookings
 - Multiple subscription options
-- Parental control, lock/unlock specific movies or turning ON main parental control
+- Parental control, lock/unlock specific movies or turning ON/OFF main parental control
 - Desktop python application to decrypt downloaded movies in background to be able to watch downloaded movies
 - Chatbot to ask about suggestions, movies, actors using gemini
 - Create random encryption key for registered user, so the key can be used to encrypt the movie when downloading it and decrypt it when playing it using python desktop application
