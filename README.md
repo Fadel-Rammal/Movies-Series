@@ -108,6 +108,8 @@ Toggle switch to be able to lock/unlock the movie, the password entered must be 
 
 | Login Page |
 
+user: admin  |  password: 123
+
 ![image](https://github.com/Fadel-Rammal/Movies-Series/assets/174458185/e69718c0-fd09-4512-a43c-96091fd458ea)
 
 | Main Page |
@@ -176,12 +178,10 @@ Toggle switch to be able to lock/unlock the movie, the password entered must be 
 
 - Run imdb script and chatbot script using cmd before using chatbot and see actors for a movie on website
 
-- For notification add firebase dependencies then send notification using firebase cloud message console page
-
-- Admin Page credentials:
-  Username: admin
-  Password: 123  
-
+- For notification add firebase dependencies to the code using android studio then send notification using firebase cloud message console page
+  
+- To check movie details click on the poster or movie title, wait until actors are received to see them, run before the script of imdb.
+  
 
 
 
