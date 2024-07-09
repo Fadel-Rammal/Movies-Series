@@ -1,5 +1,5 @@
 # Movies-Series
-Bachelor of Science Senior Projectt
+Bachelor of Science Senior Project
 
 ### FolderSize To Download is 275 MB
 
